@@ -4,10 +4,7 @@ return {
 		"williamboman/mason-lspconfig.nvim",
 	},
 	config = function()
-		local mason = require("mason")
-		-- Setup Mason
-		mason.setup({})
-		-- Mason LspConfig Setup
+		require("mason").setup({})
 		local mason_lspconfig = require("mason-lspconfig")
 		mason_lspconfig.setup({
 			ensure_installed = {

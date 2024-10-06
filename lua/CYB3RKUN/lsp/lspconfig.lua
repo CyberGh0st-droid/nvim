@@ -11,7 +11,6 @@ return {
 		"williamboman/mason.nvim",
 		"williamboman/mason-lspconfig.nvim",
 	},
-
 	config = function()
 		--import lspconfig plugin
 		local lspconfig = require("lspconfig")

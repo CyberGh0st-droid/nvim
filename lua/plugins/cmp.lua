@@ -4,7 +4,9 @@ return {
 	dependencies = {
 		"hrsh7th/cmp-buffer",
 		"hrsh7th/cmp-path",
-		"L3MON4d3/Luasnip",
+		"hrsh7th/cmp-cmdline",
+		"windwp/nvim-autopairs",
+		"L3MON4d3/LuaSnip",
 		"saadparwaiz1/cmp_luasnip",
 		"rafamadriz/friendly-snippets",
 	},
@@ -20,7 +22,7 @@ return {
 				completeopt = "menu,menuone,preview,noselect",
 			},
 			snippet = {
-				expand = function()
+				expand = function(args)
 					luasnip.lsp_expand(args.body)
 				end,
 			},
@@ -29,8 +31,8 @@ return {
 				documentation = cmp.config.window.bordered(),
 			},
 			mapping = cmp.mapping.preset.insert({
-				["<C-k>"] = cmp.mapping.select_prev_item(),
-				["<C-j>"] = cmp.mapping.select_next_item(),
+				["<C-k>"] = cmp.mapping.select_prev_item(cmp_select),
+				["<C-j>"] = cmp.mapping.select_next_item(cmp_select),
 				["<C-y>"] = cmp.mapping.confirm({ select = true }),
 				["<C-b>"] = cmp.mapping.scroll_docs(-4),
 				["<C-f>"] = cmp.mapping.scroll_docs(4),
