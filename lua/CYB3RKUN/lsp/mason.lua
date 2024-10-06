@@ -4,14 +4,22 @@ return {
 		"williamboman/mason-lspconfig.nvim",
 	},
 	config = function()
-		require("mason").setup({})
+
+		-- Import Mason
+		local mason = require("mason")
+
+		-- Import Mason LSPCONFIG
+
 		local mason_lspconfig = require("mason-lspconfig")
-		mason_lspconfig.setup({
+		-- Setup Mason
+
+		mason.setup({
 			ensure_installed = {
-				"clangd",
-				"lua_ls"
-			},
-			automatic_installation = true,
+				"lua_ls",
+				"clang_d",
+				"gdscript",
+			}
 		})
+		-- Setup mason LSPCONFIG
 	end,
 }
