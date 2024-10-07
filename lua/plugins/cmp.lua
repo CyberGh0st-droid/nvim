@@ -67,10 +67,11 @@ return {
 			}),
 
 			sources = {
-				{ name = "luasnip" },
 				{ name = "nvim_lsp" },
-				{ name = "gdscript" },
+				{ name = "luasnip" },
 				{ name = "path" },
+				{ name = "buffer"},
+				{ name = "gdscript" },
 			},
 			formatting = {
 				format = lspkind.cmp_format({
