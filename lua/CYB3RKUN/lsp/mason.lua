@@ -13,13 +13,15 @@ return {
 		local mason_lspconfig = require("mason-lspconfig")
 		-- Setup Mason
 
-		mason.setup({
+		mason.setup({})
+		-- Setup mason LSPCONFIG
+		mason_lspconfig.setup({
 			ensure_installed = {
 				"lua_ls",
-				"clang_d",
-				"gdscript",
-			}
+				"clangd",
+				""
+			},
+			automatic_installation = true
 		})
-		-- Setup mason LSPCONFIG
 	end,
 }
