@@ -1,3 +1,7 @@
+-- KUDOS:
+-- YT_CHANNEL: @joseanmartinez
+-- GITHUB: @Geerayef/Dotfiles
+-- https://github.com/Geerayef/Dotfiles/blob/6dd72f17130a8d5f76b5a919594990c8497cc4b9/.config/nvim/lua/plugins/lsp.lua
 return {
 	"neovim/nvim-lspconfig",
 	event = { "BufReadPre", "BufNewFile" },
@@ -35,7 +39,7 @@ return {
 			opts.buffer = bufnr
 
 			-- NOTE: Keymaps are defined in lsp_keymaps.lua
-			local keymaps = require('CYB3RKUN.lsp.lsp_keymaps')
+			local keymaps = require("CYB3RKUN.lsp.lsp_keymaps")
 			--call the keymaps function from lsp_keymaps.lua
 			keymaps(client, bufnr)
 			--set formatting
@@ -65,12 +69,12 @@ return {
 			cmd = { "/home/cyb3rkun/.local/share/nvim/mason/bin/clangd" },
 			filetypes = { "c", "cpp", "objc", "objcpp", "cuda", "proto" },
 			root_dir = lspconfig.util.root_pattern(
-				'.clang-format',
-				'.editor-config',
-				'.compile-commands.json',
-				'.compile-flags.txt',
-				'.configure.ac',
-				'.git'
+				".clang-format",
+				".editor-config",
+				".compile-commands.json",
+				".compile-flags.txt",
+				".configure.ac",
+				".git"
 			),
 			single_file_support = true,
 		})

@@ -1,3 +1,6 @@
+-- YT: @joseanmartinez
+-- YT_VID: https://www.youtube.com/watch?v=6pAG3BHurdM
+
 return {
 	"hrsh7th/nvim-cmp",
 	event = "InsertEnter",
@@ -70,7 +73,7 @@ return {
 				{ name = "nvim_lsp" },
 				{ name = "luasnip" },
 				{ name = "path" },
-				{ name = "buffer"},
+				{ name = "buffer" },
 				{ name = "gdscript" },
 			},
 			formatting = {
@@ -78,7 +81,7 @@ return {
 					maxwidth = 50,
 					ellipsis_char = "...",
 				}),
-			}
+			},
 		})
 		local cmp_autopairs = require("nvim-autopairs.completion.cmp")
 		cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done())
