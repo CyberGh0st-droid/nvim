@@ -18,8 +18,7 @@ return {
 		mason_lspconfig.setup({
 			ensure_installed = {
 				"lua_ls",
-				"clangd",
-				""
+				"clangd"
 			},
 			automatic_installation = true
 		})

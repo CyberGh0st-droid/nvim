@@ -1,15 +1,17 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
-vim.keymap.set('n', '<leader>pv', vim.cmd.Rex)
+local keymap = vim.keymap.set
+keymap('n', '<leader>pv', vim.cmd.Rex)
 
 --yanking to clipboard
-vim.keymap.set('n', '<leader>y', '\"+y')
-vim.keymap.set('v', '<leader>y', '\"+y')
-vim.keymap.set('n', '<leader>yap', '\"+yap')
-vim.keymap.set('v', '<leader>yap', '\"+yap')
+keymap('n', '<leader>y', '\"+y')
+keymap('v', '<leader>y', '\"+y')
+keymap('n', '<leader>yap', '\"+yap')
+keymap('v', '<leader>yap', '\"+yap')
 
-vim.keymap.set('i', '<C-o>', '<Esc>')
-vim.keymap.set('v', '<C-o>', '<Esc>')
+keymap('i', '<C-o>', '<Esc>')
+keymap('v', '<C-o>', '<Esc>')
 
-
+-- clear search highlights
+keymap("n", "<leadernh>nh", "<CMD>nohl<CR>", {desc = "clear Search Highlights "})

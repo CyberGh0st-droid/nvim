@@ -22,7 +22,7 @@ return {
 							--["<C-q>"] = actions.send_selected_to_qflist + actions.open_qflist, --add item to quick fix list and open the quick fix list
 						}
 					}
-				} 
+				}
 			} )
 			telescope.load_extension('fzf')
 			local builtin = require('telescope.builtin')
@@ -47,6 +47,7 @@ return {
 				local word = vim.fn.expand("<cWORD>")
 				builtin.grep_string({ search = word})
 			end)
+			keymap.set("n", "<leader>ft", "<CMD>TodoTelescope<cr>", { desc = "Find todos"})
 		end
 	},
 	{
