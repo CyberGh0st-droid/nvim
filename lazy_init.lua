@@ -15,7 +15,7 @@ require("lazy").setup({
 	"plugins",
 	spec = {
 		{ import = "plugins" },
-		{ import = "CYB3RKUN.lsp.mason" },
-		{ import = "CYB3RKUN.lsp.lspconfig" },
+		{ import = "Cyb3rVim.lsp.mason" },
+		{ import = "Cyb3rVim.lsp.lspconfig" },
 	},
 })

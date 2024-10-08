@@ -1,3 +1,3 @@
-require('CYB3RKUN')
+require("Cyb3rVim")
 package.path = package.path .. ";" .. os.getenv("HOME") .. "/.config/nvim/?.lua"
-require('lazy_init')
+require("lazy_init")

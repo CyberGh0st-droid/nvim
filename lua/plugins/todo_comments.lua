@@ -24,10 +24,10 @@ return {
 			NOTE = { icon = " ", color = "hint", alt = { "INFO" } },
 			TEST = { icon = "⏲ ", color = "test", alt = { "TESTING", "PASSED", "FAILED" } },
 			CREDIT = {
-				icon = " ",
-				color = "#00FFFF",
-				alt = {
-					"COMMEND", --COMMEND:
+				icon = " ", -- NOTE: we define an icon to be used for this tag
+				color = "#00FFFF", -- NOTE: we define a color to be used for this tag
+				alt = { -- NOTE: we define alternative tags that should use the same icon and color
+					"COMMEND",
 					"ATTRIBUTE",
 					"ACKNOWLADGEMENT",
 					"HAT_TIP",
@@ -37,41 +37,34 @@ return {
 					"SPECIAL_THANKS_TO",
 				},
 			},
+
+			-- NOTE: some tags I use to give credit to people from whoms configs I took snippets
 			YT = { icon = "󰗃 ", color = "#FF0000", alt = { "YT_VID", "YT_CHANNEL" } },
 			REDDIT = { icon = " ", color = "#FF4500", alt = { "REDDITOR", "R/u/", "REDDIT" } },
 			INSTAGRAM = { icon = "󰋾 ", color = "#5B51D8", alt = { "INSTA" } },
 			X = { icon = " ", color = "#FFFFFF", alt = { "TWITTER", "TWEET" } },
 			GITHUB = { icon = " ", color = "#FFFFFF", alt = { "GIT" } },
+			DESC = { icon = "󰈙", color = "#CB9D06", alt = { "DESCRIPTION", "EXPLANATION", "EXPLAIN" } },
 		},
+
+		-- NOTE: here we define some highlighting options for our tags
 		highlight = {
-			multiline = true,
+			multiline = true, -- NOTE: Allow multiline comments to be highlighted
 			multiline_pattern = "^.",
-			multiline_context = 10,
+			multiline_context = 10, -- NOTE: I believe this defines how many lines a multiline comment can be
+
+			-- NOTE: this controls the highlighting for everything that is before the comment tag.
+			-- fg will cause it to be highlighted the same color as the tag
 			before = "",
 			keyword = "wide",
-			after = "fg",
-			pattern = [[.*<(KEYWORDS)\s*:]],
+			after = "fg", -- NOTE: this controls the highlighting for whatever comes after the tag
+			pattern = [[.*(KEYWORDS)\s*:]], -- NOTE: this is the vim regex pattern used to find todo-comments
 			comments_only = true,
 			max_line_len = 400,
-			exclude = {}, --NOTE: List of filetypes to exclude
-			throttle = 200, -- NOTE: no documentation on what this does though I would assume it's for optimization reasons
+			exclude = {}, -- NOTE: List of filetypes to exclude
+			throttle = 200, -- NOTE: no documentation on what this does though I would assume it's for optimization reasonsi WARN:
 		},
 	},
-	-- NOTE: it seems using config function will not allow you to pass custom options in opts = {} table --
-	--
-	-- 	config = function()
-	-- 		local todo_comments = require("todo-comments")
-	--
-	-- 		-- NOTE: Customize TODO comments
-	-- 		local keymap = vim.keymap.set
-	-- 		keymap("n", "]t", function()
-	-- 			todo_comments.jump_next()
-	-- 		end, { desc = "Next todo comment" })
-	-- 		keymap("n", "[t]", function()
-	-- 			todo_comments.jump_prev()
-	-- 		end, { desc = "Previous todo Comment" })
-	-- 		todo_comments.setup({ opts })
-	-- 	end,
 }
 -- TODO:
 -- HACK:
@@ -95,7 +88,7 @@ return {
 --
 -- REDDIT:
 -- REDDITOR:
--- R/u/: put reddit username herek
+-- R/u/: put reddit username here
 --
 -- INSTA:
 -- INSTAGRAM:

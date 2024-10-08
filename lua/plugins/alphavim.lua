@@ -24,7 +24,8 @@ return {
 		-- REDDIT: @Cyb3r-Kun
 		-- YT: @Cyb3r-Kun
 		--
-		-- yes I created this header but it's based of one I saw in @typecraft_dev s playlist called neovim for newbs
+		-- NOTE: I created this header but it's based of one I saw in typecraft_dev's playlist
+		-- called [ neovim for newbs ]
 		-- YT: @typecraft_dev
 		-- YT_VID: https://www.youtube.com/watch?v=iXIwm4mCpuc&list=PLsz00TDipIffreIaUNk64KxTIkQaGguqn&index=5
 		dashboard.section.header.val = {
@@ -56,7 +57,7 @@ return {
 			dashboard.button("f", "󰮗   Find file", ":Telescope find_files<CR>"),
 			dashboard.button("e", "   File Explorer", ":Neotree<CR>"),
 			dashboard.button("r", "   Recent", ":Telescope oldfiles<CR>"),
-			dashboard.button("c", "   Configuration", ":e ~/.config/nvim/lua/CYB3RKUN/init.lua<CR>"),
+			dashboard.button("c", "   Configuration", ":e ~/.config/nvim/lua/Cyb3rVim/init.lua<CR>"),
 			dashboard.button("R", "󱘞   Ripgrep", ":Telescope live_grep<CR>"),
 			dashboard.button("q", "󰗼   Quit", ":qa<CR>"),
 		}
