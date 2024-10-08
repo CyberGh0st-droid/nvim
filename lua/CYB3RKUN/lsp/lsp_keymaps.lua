@@ -58,7 +58,7 @@ local keymaps = function(client, bufnr)
 	-- See `:help K` for why this keymap
 	keymap("n", "K", vim.lsp.buf.hover, { buffer = bufnr, desc = "Hover Documentation" })
 	keymap("n", "<leader>k", vim.lsp.buf.signature_help, { buffer = bufnr, desc = "Signature Documentation" })
-	-- format the file
+	-- NOTE: format the file
 	keymap("n", "<leader>gf", vim.lsp.buf.format, {})
 end
 
