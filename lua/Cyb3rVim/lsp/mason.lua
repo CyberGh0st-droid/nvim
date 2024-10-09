@@ -16,7 +16,15 @@ return {
 		local mason_tool_installer = require("mason-tool-installer")
 
 		-- NOTE: Setup Mason Before mason_lspconfig as it is a dependency
-		mason.setup({})
+		mason.setup({
+			ui = {
+				icons = {
+					package_installed = " ",
+					package_pending = " ",
+					package_uninstalled = " ",
+				},
+			},
+		})
 
 		-- NOTE: Setup mason LSPCONFIG after mason
 		mason_lspconfig.setup({
